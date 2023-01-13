@@ -149,7 +149,7 @@ nav {
   width: 150px;
   height: 150px;
   margin: 20px auto 0 auto;
-  background-image: url(/!images/bazar.jpg);
+  background-image: url(bazar.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -258,7 +258,7 @@ nav {
   display: flex;
   width: 270px;
   height: 100%;
-  background-image: url(/!images/bazar.jpg);
+  background-image: url(bazar.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
