@@ -4,7 +4,7 @@
   user-select: none;
   padding: 0;
   margin: 0;
-  /* direction: rtl; */
+  direction: rtl;
 }
 
 *:focus {
@@ -123,7 +123,7 @@ nav {
   width: 46px;
   height: 46px;
   margin: 0 0 0 20px;
-  background-image: url(/!images/amir.png);
+  background-image: url(amir.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,17 +145,10 @@ nav {
   width: 1020px;
   height: 520px;
   margin: 100px auto 50px auto;
-  /* background-image: linear-gradient(90deg, #2870dd 20%, #a92ce2 70%); */
-  /* background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); */
   border-radius: 15px;
   z-index: 1;
   padding: 10;
-  /* background-image: url(/!images/sparkle-stars.gif);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; */
   background-color: #007491;
-  /* animation: AnimateBG 1s ease infinite; */
 }
 
 .about{ 
@@ -187,7 +180,6 @@ nav {
   width: 100%;
   height: 80%;
   padding: 20px;
-  direction: ltr;
 }
 
 
@@ -198,13 +190,22 @@ nav {
   color: rgb(168, 168, 168);
 }
 
-.pasll{
-  display: inline;
+.boro{
+  right: 0;
 }
 
-.matn span:nth-child(1){
-  color: red;
+.matn span:nth-child(3){
+  animation: 0.7s linear infinite boroo;
 }
+
+@keyframes boroo {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+
+/* @keyframes boroo {
+  to{display: none;}
+} */
 
 .cheshmak{
   display: flex;
@@ -302,7 +303,7 @@ nav {
   display: flex;
   width: 270px;
   height: 100%;
-  background-image: url(/!images/amirkabir2.jpg);
+  background-image: url(amirkabir2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -315,21 +316,21 @@ nav {
 }
 
 .pi2{
-  background-image: url(/!images/amirkabir3.jpg);
+  background-image: url(amirkabir3.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pi3{
-  background-image: url(/!images/amirkabir5.jpg);
+  background-image: url(amirkabir5.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pi4{
-  background-image: url(/!images/amirkabir4.jpg);
+  background-image: url(amirkabir4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -521,7 +522,7 @@ nav {
 /* ============================================================================ */
 
 footer {
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   width: 100%;
   height: 200px;
@@ -544,7 +545,7 @@ ul {
   list-style: none;
   /* color: #C3CDC3; */
   color: rgb(192, 191, 191);
-  font-weight: bolder;
+  /* font-weight: bolder; */
 }
 
 li {
@@ -581,6 +582,7 @@ a:hover {
 
 .copyright p {
   margin: 0;
+  direction: ltr;
 }
 
 .loading{
@@ -809,6 +811,19 @@ a:hover {
 
   .moratab{
     flex-direction: column;
+  }
+
+  .cartdiv{
+    height: auto;
+  }
+
+  .t1a{
+    margin-bottom: 100px;
+  }
+
+  .tozih{
+    /* width: 200px; */
+    margin-bottom: 100px;
   }
 
   footer{

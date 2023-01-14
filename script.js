@@ -10,7 +10,7 @@ var dayereanim1 = document.getElementById("dayereanim1")
 var dayereanim2 = document.getElementById("dayereanim2")
 var moratab1 = document.getElementById("moratab1")
 var moratab2 = document.getElementById("moratab2")
-var text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea laudantium impedit magni iure voluptatibus quidem cum perferendis eum ipsa placeat necessitatibus molestiae dolorem illum ducimus, doloribus ullam voluptatem iste quaerat."
+var text = "میرزا محمد تقی‌خان فراهانی (۱۲۲۲-۱۲۶۸ق) (۱۱۸۵-۱۲۳۰ش) مشهور به امیرکبیر، صدراعظم‌ ایران در دوره ناصرالدین شاه قاجار. وی در دوره صدارت سه سال و سه ماه (۳۹ ماهه) خود، اصلاحاتی را در زمینه‌های آموزشی، اجتماعی و سیاسی ایران آغاز کرد. امیرکبیر دارُالفُنون را بنیان نهاد، مسجد و مدرسه دینی ساخت، بست‌نشینی در بیوت علما و تعزیه‌خوانی را محدود و شورش بابی‌ها را سرکوب کرد. او با دسیسه اطرافیان شاه از مقام خود برکنار و به کاشان تبعید شد و به دستور شاه به قتل رسید. قبر وی در حرم امام حسین(ع) قرار دارد."
 var prasl = text.split("")
 var cheshmak = document.getElementById("cheshmak")
 console.log(prasl[4])
@@ -63,35 +63,80 @@ setTimeout(() => {
     gradientan.style.transition="2s ease"
     gradientan.style.transform="translateX(0px)"
   }, "1");
+  var textt = ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea laudantium impedit magni iure voluptatibus quidem cum perferendis eum ipsa placeat necessitatibus molestiae dolorem illum ducimus, doloribus ullam voluptatem iste quaerat."]
   setTimeout(() => {
-      jjo()
+  typing()
+  typeWriter()
   }, "2200");
   nav.style.transform="translateY(0px)"
   // aboutme.style.transform="translateX(0px)"
-  var adt = []
-  var agf = []
-  var spann = document.createElement("span").innerHTML="ro"
-  function jjo(){
-    var adad = -1
-    var ses = setInterval(() => {
-      adad += 1
-      adt.push(prasl[adad])
-      document.getElementById("pasl").innerText = adt.join("")
-    }, 20);
+//   var adt = []
+//   var agf = []
+//   var spann = document.createElement("span").innerHTML="ro"
+//   function jjo(){
+//     var adad = -1
+//     var ses = setInterval(() => {
+//       adad += 1
+//       adt.push(prasl[adad])
+//       document.getElementById("pasl").innerText = adt.join("")
+//     }, 20);
 
-    // setInterval(() => {
-    //   cheshmak.style.backgroundColor="transparent"
-    //   setTimeout(() => {
-    //     cheshmak.style.backgroundColor="black"
-    //   }, 500);
-    // }, 100);
+//     // setInterval(() => {
+//     //   cheshmak.style.backgroundColor="transparent"
+//     //   setTimeout(() => {
+//     //     cheshmak.style.backgroundColor="black"
+//     //   }, 500);
+//     // }, 100);
 
 
-    setInterval(() => {
-      if(adt.length>232){
-        clearInterval(ses)
-      }
-    }, 20);
+//     setInterval(() => {
+//       if(adt.length>232){
+//         clearInterval(ses)
+//       }
+//     }, 20);
+// }
+
+var i = 0;
+var speed = 20;
+
+function typeWriter() {
+  if (i < text.length) {
+    document.querySelector(".boro").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+    donetype()
+  }
+}
+
+
+
+
+// document.getElementById("pasl").setAttribute("pos")
+function typing(){
+  document.querySelector(".pos").setAttribute("id","pasl")
+  // document.querySelector(".pos").removeAttribute("id")
+  const myText = new AutoTyping({
+
+    id: 'pasl', //Your HTML element id without # (string) - required
+    
+    typeText: ["asd","salam salam"], //Your text (array with strings) - required
+
+    typeSpeed:20,
+    
+    }).stop();
+
+    setTimeout(() => {
+      document.querySelector(".pos").removeAttribute("id")
+    }, 1000);
+}
+
+function donetype(){
+  if(document.querySelector(".boro").innerHTML == text){
+    setTimeout(() => {
+      var second = document.querySelector(".matn span:nth-child(3)")
+    second.style.display="none"
+    }, 1000);
+  }
 }
 
   
