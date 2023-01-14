@@ -4,6 +4,7 @@
   user-select: none;
   padding: 0;
   margin: 0;
+  /* direction: rtl; */
 }
 
 *:focus {
@@ -36,7 +37,7 @@ body {
   display: block;
   flex-direction: column;
   width: 100%;
-  background-color: #bbc4fc;
+  background-color: rgb(15, 12, 12);
   user-select: auto;
 }
 
@@ -62,6 +63,7 @@ nav {
   transform: translateY(-70px);
   transition: 1s;
   z-index: 10;
+  direction: ltr;
 }
 
 .navDiv {
@@ -72,6 +74,7 @@ nav {
   /* border: 1px solid antiquewhite; */
   cursor: pointer;
   transition: 0.5s;
+  direction: ltr;
 }
 
 .navDiv p {
@@ -81,6 +84,7 @@ nav {
   margin: auto auto auto auto;
   font-size: 100%;
   font-weight: 500;
+  direction: ltr;
 }
 
 .navDiv::after {
@@ -91,10 +95,12 @@ nav {
   height: 5px;
   bottom: 0;
   transition: 0.5s;
+  direction: ltr;
 }
 
 .navDiv:hover::after {
   width: 100%;
+  direction: ltr;
 }
 
 .navDiv:hover {
@@ -117,7 +123,7 @@ nav {
   width: 46px;
   height: 46px;
   margin: 0 0 0 20px;
-  background-image: url(amir.png);
+  background-image: url(/!images/amir.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,24 +138,41 @@ nav {
   font-weight: bold;
 }
 
-.about {
+.gradientan{
   display: flex;
   flex-direction: column;
   width: 80%;
-  max-width: 1000px;
-  height: 500px;
+  width: 1020px;
+  height: 520px;
   margin: 100px auto 50px auto;
-  /* background-color: #024CB6; */
-  background-image: linear-gradient(90deg, #2870dd 20%, #a92ce2 70%);
+  /* background-image: linear-gradient(90deg, #2870dd 20%, #a92ce2 70%); */
+  /* background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3); */
   border-radius: 15px;
   z-index: 1;
+  padding: 10;
+  /* background-image: url(/!images/sparkle-stars.gif);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background-color: #007491;
+  /* animation: AnimateBG 1s ease infinite; */
+}
+
+.about{ 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #002781;
+  border-radius: 15px;
+  outline: 5px solid black;
 }
 
 .photo-about {
   width: 150px;
   height: 150px;
   margin: 20px auto 0 auto;
-  background-image: url(bazar.jpg);
+  background-image: url(/!images/amirkabir1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -158,17 +181,44 @@ nav {
   transition: 0.2s ease-out;
 }
 
-.matn {
+.matn{
+  display: flex;
+  /* flex-direction: column; */
   width: 100%;
   height: 80%;
   padding: 20px;
+  direction: ltr;
 }
 
+
 .matn p {
-  display: inline-block;
-  margin: 50px 0 0 0;
+  display: flex;
+  /* margin: 50px 0 0 0; */
   font-weight: bolder;
+  color: rgb(168, 168, 168);
 }
+
+.pasll{
+  display: inline;
+}
+
+.matn span:nth-child(1){
+  color: red;
+}
+
+.cheshmak{
+  display: flex;
+  width: 5px;
+  height: 20px;
+  background-color: black;
+  animation: 0.7s infinite linear llo;
+}
+
+@keyframes llo {
+  0%{background-color: transparent;}
+  100%{background-color: black;}
+}
+
 
 .cartdiv {
   display: flex;
@@ -182,29 +232,24 @@ nav {
 
 /* ====================================cart==================================== */
 .tozih {
-  /* position: absolute; */
   perspective: 1060px;
   display: flex;
   flex-direction: column;
   width: 270px;
   height: 300px;
-  /* border: 1px pink solid; */
   justify-content: flex-end;
   font-size: 13;
-  /* padding: 20px; */
   border-radius: 15px;
-  background: rgb(200, 36, 135);
   background: linear-gradient(
     0deg,
-    rgba(200, 36, 135, 1) 34%,
-    rgba(107, 21, 206, 1) 88%
+    rgb(3, 7, 71) 34%,
+    rgb(66, 4, 212) 88%
   );
   transition: 500ms;
   cursor: default;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  /* z-index: 1000; */
   box-shadow: 20px 20px #f5debf;
 }
 
@@ -233,11 +278,10 @@ nav {
   font-size: 13;
   /* padding: 20px; */
   border-radius: 15px;
-  background: rgb(200, 36, 135);
   background: linear-gradient(
     0deg,
-    rgba(200, 36, 135, 1) 34%,
-    rgba(107, 21, 206, 1) 88%
+    rgb(3, 7, 71) 34%,
+    rgb(66, 4, 212) 88%
   );
   transition: 500ms;
   cursor: default;
@@ -258,7 +302,7 @@ nav {
   display: flex;
   width: 270px;
   height: 100%;
-  background-image: url(bazar.jpg);
+  background-image: url(/!images/amirkabir2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -270,8 +314,31 @@ nav {
   backface-visibility: hidden;
 }
 
+.pi2{
+  background-image: url(/!images/amirkabir3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pi3{
+  background-image: url(/!images/amirkabir5.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pi4{
+  background-image: url(/!images/amirkabir4.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 .pi p {
-  background-color: rgba(153, 2, 235, 0.9);
+  background-color: rgba(111, 2, 235, 0.8);
+  /* background-color: #002781; */
   height: 40%;
   font-size: 11;
   font-weight: 300;
@@ -281,6 +348,20 @@ nav {
   border-bottom-right-radius: 15px;
   color: rgb(255, 255, 255);
   transition: 600ms;
+}
+
+
+.tozih:hover p {
+  height: 100%;
+  /* background-color: rgba(153, 2, 235, 1); */
+  background-color: rgba(111, 2, 235, 1);
+  border-radius: 15px;
+  font-size: 17;
+}
+
+.tozih:hover .an {
+  bottom: 0;
+  right: 0;
 }
 
 
@@ -329,7 +410,8 @@ nav {
 }
 
 .pu p {
-  background-color: rgba(153, 2, 235, 0.9);
+  /* background-color: rgba(153, 2, 235, 0.9); */
+  background-color: rgba(111, 2, 235, 1);
   height: 100%;
   font-size: 17;
   font-weight: 300;
@@ -351,10 +433,11 @@ nav {
   width: 150px;
   height: 25px;
   margin: auto auto 20px auto;
-  background-color: aqua;
+  background-color: #63C2CF;
   border-radius: 5px;
   transition: 1s;
   font-weight: bolder;
+  direction: ltr;
 }
 
 .dokmekam:hover {
@@ -370,7 +453,7 @@ nav {
   opacity: 0;
   display: flex;
   position: absolute;
-  background-color: aqua;
+  background-color: #63C2CF;
   width: 150px;
   height: 25px;
   margin: auto auto 20px auto;
@@ -380,6 +463,7 @@ nav {
   backface-visibility: hidden;
   transition: 0.3s;
   font-weight: bolder;
+  direction: ltr;
 }
 
 .dokme p {
@@ -411,22 +495,10 @@ nav {
   min-height: 60px;
   border-radius: 5px;
   margin-bottom: 20px;
-  background-image: url(bazar.jpg);
+  background-image: url(/!images/bazar.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.tozih:hover p {
-  height: 100%;
-  background-color: rgba(153, 2, 235, 1);
-  border-radius: 15px;
-  font-size: 17;
-}
-
-.tozih:hover .an {
-  bottom: 0;
-  right: 0;
 }
 
 .charkh {
@@ -454,7 +526,7 @@ footer {
   width: 100%;
   height: 200px;
   /* background-color: #003279; */
-  background-color: #474d75;
+  background-color: #2a315f;
 }
 
 .createdby {
@@ -517,9 +589,11 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 50;
-  background-color: white;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: #9eafd8;
   justify-content: center;
   align-items: center;
+  direction: ltr;
 }
 
 .dayere{
@@ -575,6 +649,7 @@ a:hover {
   font-size: 30px;
   margin: 0 10px 0 10px;
   cursor: pointer;
+  color: white;
 }
 
 
@@ -726,6 +801,10 @@ a:hover {
   .photo-about {
     width: 100px;
     height: 100px;
+  }
+
+  .gradientan{
+    max-width: 80%;
   }
 
   .moratab{

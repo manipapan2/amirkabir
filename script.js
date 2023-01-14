@@ -3,12 +3,18 @@ var khatclick = document.getElementById("khatclick")
 var navmobile = document.getElementById("navmobile")
 var zabdarclick = document.getElementById("zabdarclick")
 var aboutme = document.querySelector("#aboutme")
+var gradientan = document.getElementById("gradientan")
 var photoabout = document.getElementById("photoabout")
 var loading = document.getElementById("loading")
 var dayereanim1 = document.getElementById("dayereanim1")
 var dayereanim2 = document.getElementById("dayereanim2")
 var moratab1 = document.getElementById("moratab1")
 var moratab2 = document.getElementById("moratab2")
+var text = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea laudantium impedit magni iure voluptatibus quidem cum perferendis eum ipsa placeat necessitatibus molestiae dolorem illum ducimus, doloribus ullam voluptatem iste quaerat."
+var prasl = text.split("")
+var cheshmak = document.getElementById("cheshmak")
+console.log(prasl[4])
+
 
 function whl(){
   loading.style.width=window.screen.width
@@ -44,6 +50,7 @@ setTimeout(() => {
 
 setTimeout(() => {
   aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
+  gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
   document.querySelector("body").style.position="absolute"
   setTimeout(() => {
       nav.style.transition="0.3s"
@@ -52,8 +59,41 @@ setTimeout(() => {
       aboutme.style.transition="2s ease"
       aboutme.style.transform="translateX(0px)"
   }, "1");
+  setTimeout(() => {
+    gradientan.style.transition="2s ease"
+    gradientan.style.transform="translateX(0px)"
+  }, "1");
+  setTimeout(() => {
+      jjo()
+  }, "2200");
   nav.style.transform="translateY(0px)"
   // aboutme.style.transform="translateX(0px)"
+  var adt = []
+  var agf = []
+  var spann = document.createElement("span").innerHTML="ro"
+  function jjo(){
+    var adad = -1
+    var ses = setInterval(() => {
+      adad += 1
+      adt.push(prasl[adad])
+      document.getElementById("pasl").innerText = adt.join("")
+    }, 20);
+
+    // setInterval(() => {
+    //   cheshmak.style.backgroundColor="transparent"
+    //   setTimeout(() => {
+    //     cheshmak.style.backgroundColor="black"
+    //   }, 500);
+    // }, 100);
+
+
+    setInterval(() => {
+      if(adt.length>232){
+        clearInterval(ses)
+      }
+    }, 20);
+}
+
   
   setTimeout(() => {
       photoabout.style.outlineOffset="5px"
