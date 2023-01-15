@@ -1,7 +1,6 @@
 * {
   border-style: none;
   box-sizing: border-box;
-  user-select: none;
   padding: 0;
   margin: 0;
   direction: rtl;
@@ -39,6 +38,7 @@ body {
   width: 100%;
   background-color: rgb(15, 12, 12);
   user-select: auto;
+  overflow-x: hidden;
 }
 
 html {
@@ -64,6 +64,7 @@ nav {
   transition: 1s;
   z-index: 10;
   direction: ltr;
+  user-select: none;
 }
 
 .navDiv {
@@ -138,6 +139,20 @@ nav {
   font-weight: bold;
 }
 
+.types{
+  /* position: absolute; */
+  display: flex;
+  height: 40px;
+  /* background-color: red; */
+  z-index: 50;
+  margin: 10px auto 0px auto;
+}
+
+.types p{
+  margin-bottom: 0;
+}
+
+
 .gradientan{
   display: flex;
   flex-direction: column;
@@ -187,7 +202,8 @@ nav {
   display: flex;
   /* margin: 50px 0 0 0; */
   font-weight: bolder;
-  color: rgb(168, 168, 168);
+  /* color: rgb(168, 168, 168); */
+  color: rgb(214, 214, 214);
 }
 
 .boro{
@@ -220,6 +236,17 @@ nav {
   100%{background-color: black;}
 }
 
+.hoverme{
+  position: absolute;
+  display: flex;
+  transform: translateY(-230px);
+}
+
+.hoverme p{
+  font-size: 50px;
+  direction: ltr;
+  color: white;
+}
 
 .cartdiv {
   display: flex;
@@ -439,6 +466,7 @@ nav {
   transition: 1s;
   font-weight: bolder;
   direction: ltr;
+  justify-content: center;
 }
 
 .dokmekam:hover {
@@ -551,6 +579,7 @@ ul {
 li {
   display: flex;
   font-size: 20;
+  justify-content: center;
 }
 
 .kochikf {
@@ -645,9 +674,10 @@ a:hover {
   right: 0;
   justify-content: center;
   align-items: center;
+  direction: ltr;
 }
 
-#github,#youtube,#facebook,#instagram{
+#github,#youtube,#twitter,#instagram{
   font-size: 30px;
   margin: 0 10px 0 10px;
   cursor: pointer;
@@ -658,7 +688,7 @@ a:hover {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .navDiv {
     display: none;
   }
@@ -805,12 +835,20 @@ a:hover {
     height: 100px;
   }
 
+  .hoverme{
+    transform: translateY(-490px);
+  }
+
   .gradientan{
-    max-width: 80%;
+    max-width: 90%;
   }
 
   .moratab{
     flex-direction: column;
+  }
+
+  #moratab2{
+    margin-top: 0;
   }
 
   .cartdiv{
@@ -829,5 +867,9 @@ a:hover {
   footer{
     flex-direction: column;
     height: 700px;
+  }
+
+  .copyright{
+    font-size: 12px;
   }
 }

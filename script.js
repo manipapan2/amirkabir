@@ -15,6 +15,7 @@ var prasl = text.split("")
 var cheshmak = document.getElementById("cheshmak")
 console.log(prasl[4])
 
+window.addEventListener("resize",whl)
 
 function whl(){
   loading.style.width=window.screen.width
@@ -67,6 +68,18 @@ setTimeout(() => {
   setTimeout(() => {
   typing()
   typeWriter()
+  }, "2200");
+  setTimeout(() => {
+    const myText = new AutoTyping({
+
+      id: 'types', //Your HTML element id without # (string) - required
+      
+      typeText: ["میرزا محمدتقی‌خان فراهانی","امیر کبیر"], //Your text (array with strings) - required
+  
+      // typeSpeed:20,
+      
+      }).init();
+      document.querySelector(".types span:nth-child(1)").style.color="white"
   }, "2200");
   nav.style.transform="translateY(0px)"
   // aboutme.style.transform="translateX(0px)"
