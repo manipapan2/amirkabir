@@ -20,6 +20,10 @@ window.addEventListener("resize",whl)
 function whl(){
   loading.style.width=window.screen.width
   loading.style.height=window.screen.height
+  if(window.screen.width<900){
+    nav.style.borderTopRightRadius="0px"
+    nav.style.borderBottomRightRadius="0px"
+  }
 }
 
 setTimeout(dd,1000)
@@ -50,7 +54,9 @@ setTimeout(() => {
 
 
 setTimeout(() => {
-  aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
+  if(window.screen.width>768){
+    aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
+  }
   gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
   document.querySelector("body").style.position="absolute"
   setTimeout(() => {
@@ -82,32 +88,7 @@ setTimeout(() => {
       document.querySelector(".types span:nth-child(1)").style.color="white"
   }, "2200");
   nav.style.transform="translateY(0px)"
-  // aboutme.style.transform="translateX(0px)"
-//   var adt = []
-//   var agf = []
-//   var spann = document.createElement("span").innerHTML="ro"
-//   function jjo(){
-//     var adad = -1
-//     var ses = setInterval(() => {
-//       adad += 1
-//       adt.push(prasl[adad])
-//       document.getElementById("pasl").innerText = adt.join("")
-//     }, 20);
 
-//     // setInterval(() => {
-//     //   cheshmak.style.backgroundColor="transparent"
-//     //   setTimeout(() => {
-//     //     cheshmak.style.backgroundColor="black"
-//     //   }, 500);
-//     // }, 100);
-
-
-//     setInterval(() => {
-//       if(adt.length>232){
-//         clearInterval(ses)
-//       }
-//     }, 20);
-// }
 
 var i = 0;
 var speed = 20;
@@ -204,7 +185,7 @@ function donetype(){
 }, 3000);
 
 window.addEventListener("resize",()=>{
-    if(window.screen.width>768){
+    if(window.screen.width>900){
         if(window.scrollY>20){
             nav.style.borderTopRightRadius="0px"
             nav.style.borderBottomRightRadius="25px"
