@@ -839,6 +839,10 @@ a:hover {
     transform: translateY(-490px);
   }
 
+  .hoverme p{
+    font-size: 40px;
+  }
+
   .gradientan{
     max-width: 90%;
   }
