@@ -67,23 +67,26 @@ setTimeout(() => {
 
 
 setTimeout(() => {
-  // if(window.screen.width>768){
-  //   aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
-  //   // gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
-  // }
-  aboutme.style.transform="translateX(" + -window.screen.width +"px)"
-  gradientan.style.transform="translateX(" + -window.screen.width +"px)"
+  if(window.screen.width>900){
+    aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
+    gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
+  }
+  else{
+    aboutme.style.transform="translateX(" + window.innerWidth +"px)"
+    gradientan.style.transform="translateX(" + window.innerWidth +"px)"
+  }
+
   document.querySelector("body").style.position="absolute"
   setTimeout(() => {
       nav.style.transition="0.3s"
   }, "1");
   setTimeout(() => {
       aboutme.style.transition="2s ease"
-      aboutme.style.transform="translateX(0px)"
+      aboutme.style.transform="translateX(0)"
   }, "1");
   setTimeout(() => {
     gradientan.style.transition="2s ease"
-    gradientan.style.transform="translateX(0px)"
+    gradientan.style.transform="translateX(0)"
   }, "1");
   var textt = ["Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea laudantium impedit magni iure voluptatibus quidem cum perferendis eum ipsa placeat necessitatibus molestiae dolorem illum ducimus, doloribus ullam voluptatem iste quaerat."]
   setTimeout(() => {
