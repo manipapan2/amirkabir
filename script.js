@@ -67,16 +67,19 @@ setTimeout(() => {
 
 
 setTimeout(() => {
+  document.querySelector("body").style.position="absolute"
   if(window.screen.width>900){
-    aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
-    gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
+    aboutme.style.transform="translateX(" + -window.innerWidth*2 +"px)"
+    gradientan.style.transform="translateX(" + window.innerWidth +"px)"
   }
   else{
     aboutme.style.transform="translateX(" + window.innerWidth +"px)"
     gradientan.style.transform="translateX(" + window.innerWidth +"px)"
   }
 
-  document.querySelector("body").style.position="absolute"
+  // setTimeout(() =>   {
+    // document.querySelector("body").style.position="absolute"
+  // }, "1000");
   setTimeout(() => {
       nav.style.transition="0.3s"
   }, "1");
