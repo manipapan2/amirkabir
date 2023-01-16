@@ -69,12 +69,12 @@ setTimeout(() => {
 setTimeout(() => {
   document.querySelector("body").style.position="absolute"
   if(window.screen.width>900){
-    aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
-    gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
+    aboutme.style.transform="translateX(" + window.innerWidth +"px)"
+    gradientan.style.transform="translateX(" + window.innerWidth +"px)"
   }
   else{
-    aboutme.style.transform="translateX(" + -window.innerWidth  +"px)"
-    gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
+    aboutme.style.transform="translateX(" + window.innerWidth  +"px)"
+    gradientan.style.transform="translateX(" + window.innerWidth +"px)"
   }
 
   // setTimeout(() =>   {
