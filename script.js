@@ -18,11 +18,13 @@ console.log(prasl[4])
 window.addEventListener("resize",whl)
 
 function whl(){
-  loading.style.width=window.screen.width
-  loading.style.height=window.screen.height
   if(window.screen.width<900){
     nav.style.borderTopRightRadius="0px"
     nav.style.borderBottomRightRadius="0px"
+    document.querySelector(".hoverme p").innerHTML="Click The Cards!"
+  }
+  else{
+    document.querySelector(".hoverme p").innerHTML="Hover The Cards!"
   }
 }
 
@@ -40,6 +42,17 @@ function ddd(){
   setTimeout(dd,1000)
 }
 
+// function dd(){
+//   dayereanim1.style.animationPlayState="running"
+//   setTimeout(ddd,1000)
+// }
+
+// function ddd(){
+//   // dayereanim2.style.animationPlayState="paused"
+//   dayereanim2.style.animationPlayState="running"
+//   setTimeout(dd,1000)
+// }
+
 
 whl()
 
@@ -50,14 +63,16 @@ whl()
 
 setTimeout(() => {
   loading.style.display="none"
-}, 3000);
+}, 3000);//3000
 
 
 setTimeout(() => {
-  if(window.screen.width>768){
-    aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
-  }
-  gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
+  // if(window.screen.width>768){
+  //   aboutme.style.transform="translateX(" + -window.innerWidth +"px)"
+  //   // gradientan.style.transform="translateX(" + -window.innerWidth +"px)"
+  // }
+  aboutme.style.transform="translateX(" + -window.screen.width +"px)"
+  gradientan.style.transform="translateX(" + -window.screen.width +"px)"
   document.querySelector("body").style.position="absolute"
   setTimeout(() => {
       nav.style.transition="0.3s"

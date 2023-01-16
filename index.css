@@ -467,6 +467,7 @@ nav {
   font-weight: bolder;
   direction: ltr;
   justify-content: center;
+  user-select: none;
 }
 
 .dokmekam:hover {
@@ -493,6 +494,7 @@ nav {
   transition: 0.3s;
   font-weight: bolder;
   direction: ltr;
+  user-select: none;
 }
 
 .dokme p {
@@ -620,6 +622,10 @@ a:hover {
   display: flex;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: 50;
   /* background-color: rgb(255, 255, 255); */
   background-color: #9eafd8;
@@ -649,6 +655,7 @@ a:hover {
 
 .dayereanim2{
   animation: 0.5s alternate infinite danimmm;
+  /* animation-play-state: paused; */
 }
 
 @keyframes danimmm {
@@ -846,6 +853,7 @@ a:hover {
 
   .gradientan{
     max-width: 96%;
+    /* width: 96%; */
   }
 
   .moratab{
