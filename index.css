@@ -496,6 +496,7 @@ nav {
   direction: ltr;
   justify-content: center;
   user-select: none;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .dokmekam:hover {
@@ -523,7 +524,7 @@ nav {
   font-weight: bolder;
   direction: ltr;
   user-select: none;
-  font-family:serif;
+  font-family: "Gill Sans", sans-serif;
 }
 
 .dokme p {
