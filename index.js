@@ -40,11 +40,11 @@ setTimeout(() => {
 setTimeout(() => {
   document.querySelector("body").style.position = "absolute";
   if (window.screen.width > 900) {
-    aboutme.style.transform = "translateX(" + window.innerWidth + "px)";
-    gradientan.style.transform = "translateX(" + window.innerWidth + "px)";
+    aboutme.style.transform = "translateX(" + window.screen.width + "px)";
+    gradientan.style.transform = "translateX(" + window.screen.width + "px)";
   } else {
-    aboutme.style.transform = "translateX(" + window.innerWidth + "px)";
-    gradientan.style.transform = "translateX(" + window.innerWidth + "px)";
+    aboutme.style.transform = "translateX(" + window.screen.width + "px)";
+    gradientan.style.transform = "translateX(" + window.screen.width + "px)";
   }
 
   setTimeout(() => {
@@ -120,61 +120,79 @@ setTimeout(() => {
     photoabout.style.outlineOffset = "5px";
   }, "2000");
 
-  if (window.screen.width > 768) {
-    if (window.scrollY > 20) {
-      nav.style.borderTopRightRadius = "0px";
-      nav.style.borderBottomRightRadius = "25px";
+  if(window.screen.width > 900){
+    if(window.scrollY > 20){
+      nav.style.borderTopRightRadius="25px"
+      nav.style.borderBottomRightRadius="25px"
+      nav.style.borderTopRightRadius="0px"
     }
-    if (window.scrollY < 20) {
-      nav.style.borderTopRightRadius = "25px";
-      nav.style.borderBottomRightRadius = "0px";
+
+    if(window.scrollY < 20){
+      nav.style.borderTopRightRadius="25px"
+      nav.style.borderBottomLeftRadius="25px"
+      nav.style.borderBottomRightRadius="0"
     }
-  } else {
-    nav.style.borderTopRightRadius = "0px";
-    nav.style.borderBottomRightRadius = "0px";
+    document.querySelector(".hoverme p").innerHTML = "Hover The Cards"
+  }
+
+  if(window.screen.width < 900){
+    nav.style.borderTopRightRadius="0px"
+    nav.style.borderBottomLeftRadius="0px"
+    nav.style.borderBottomRightRadius="0px"
+    document.querySelector(".hoverme p").innerHTML = "Click The Cards"
   }
 
   window.onscroll = function (e) {
-    if (window.screen.width > 900) {
-      if (window.scrollY > 20) {
-        nav.style.borderTopRightRadius = "0px";
-        nav.style.borderBottomRightRadius = "25px";
+    if(window.screen.width > 900){
+      if(window.scrollY > 20){
+        nav.style.borderTopRightRadius="25px"
+        nav.style.borderBottomRightRadius="25px"
+        nav.style.borderTopRightRadius="0px"
       }
-      if (window.scrollY < 20) {
-        nav.style.borderTopRightRadius = "25px";
-        nav.style.borderBottomRightRadius = "0px";
+  
+      if(window.scrollY < 20){
+        nav.style.borderTopRightRadius="25px"
+        nav.style.borderBottomLeftRadius="25px"
+        nav.style.borderBottomRightRadius="0"
       }
-    } else {
-      nav.style.borderTopRightRadius = "0px";
-      nav.style.borderBottomRightRadius = "0px";
     }
-  };
+  
+    if(window.screen.width < 900){
+      nav.style.borderTopRightRadius="0px"
+      nav.style.borderBottomLeftRadius="0px"
+      nav.style.borderBottomRightRadius="0px"
+    }
+  }
 
   var morata1top = moratab1.offsetTop;
   var morata1height = window.getComputedStyle(moratab1).height;
   var moratab1menha = morata1top - morata1height;
 }, 3000);
 
-window.addEventListener("resize", () => {
-  if (window.screen.width > 900) {
-    if (window.scrollY > 20 && window.screen.width > 900) {
-      nav.style.borderTopRightRadius = "0px";
-      nav.style.borderBottomRightRadius = "25px";
+window.addEventListener("resize",()=>{
+  if(window.screen.width > 900){
+    if(window.scrollY > 20){
+      nav.style.borderTopRightRadius="25px"
+      nav.style.borderBottomRightRadius="25px"
+      nav.style.borderTopRightRadius="0px"
     }
-    if (window.scrollY < 20 && window.screen.width > 900) {
-      nav.style.borderTopRightRadius = "25px";
-      nav.style.borderBottomRightRadius = "0px";
+
+    if(window.scrollY < 20){
+      nav.style.borderTopRightRadius="25px"
+      nav.style.borderBottomLeftRadius="25px"
+      nav.style.borderBottomRightRadius="0"
     }
+    document.querySelector(".hoverme p").innerHTML = "Hover The Cards"
   }
-  if (window.screen.width > 900) {
-    document.querySelector(".hoverme p").innerHTML = "Hover The Cards!";
-  } 
-  else {
-    nav.style.borderTopRightRadius = "0px";
-    nav.style.borderBottomRightRadius = "0px";
-    document.querySelector(".hoverme p").innerHTML = "Click The Cards!";
+
+  if(window.screen.width < 900){
+    nav.style.borderTopRightRadius="0px"
+    nav.style.borderBottomLeftRadius="0px"
+    nav.style.borderBottomRightRadius="0px"
+    document.querySelector(".hoverme p").innerHTML = "Click The Cards"
   }
-});
+
+})
 
 khatclick.addEventListener("click", () => {
   navmobile.style.transform = "translateX(0%)";
