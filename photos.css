@@ -45,6 +45,65 @@ html {
   background: #004cff;
 }
 
+.language-selector{
+  position: absolute;
+  display: flex;
+  width: 120px;
+  height: 30px;
+  margin-top: 30px;
+  margin-right: 50px;
+  direction: rtl;
+  right: 0;
+}
+
+.farsi{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 2px white solid;
+  border-left: 0px;
+  border-radius: 0 3px 3px 0;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.english{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 2px white solid;
+  border-right: 0px;
+  border-radius: 3px 0 0 3px;
+  font-size: 12px;
+  text-align: center;
+  /* background-color: white; */
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+}
+
+
+.english p,.farsi p{
+  display: flex;
+  margin: auto;
+}
+
+.rang{
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  margin-right: 50%;
+  transition: 1s;
+}
+
 nav {
   position: sticky;
   display: flex;
@@ -185,7 +244,7 @@ nav {
   width: 46px;
   height: 46px;
   margin: 0 0 0 20px;
-  background-image: url(amir.png);
+  background-image: url(/!images/amir.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -238,7 +297,7 @@ a {
   top: 20px;
   left: 10px;
   right: 10px;
-  background-image: url(bazar.jpg);
+  background-image: url(/!images/bazar.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -247,47 +306,47 @@ a {
 }
 
 .images:nth-child(1){
-  background-image: url(amirkabir1.jpg);
+  background-image: url(amirkabi1.jpg);
   transform: rotateY(0deg) translateZ(430px);
 }
 
 .images:nth-child(2){
-  background-image: url(amirkabir2.jpg);
+  background-image: url(amirkabi2.jpg);
   transform: rotateY(40deg) translateZ(430px);
 }
 
 .images:nth-child(3){
-  background-image: url(amirkabir3.jpg);
+  background-image: url(amirkabi3.jpg);
   transform: rotateY(80deg) translateZ(430px);
 }
 
 .images:nth-child(4){
-  background-image: url(amirkabir4.jpg);
+  background-image: url(amirkabi4.jpg);
   transform: rotateY(120deg) translateZ(430px);
 }
 
 .images:nth-child(5){
-  background-image: url(amirkabir5.jpg);
+  background-image: url(amirkabi5.jpg);
   transform: rotateY(160deg) translateZ(430px);
 }
 
 .images:nth-child(6){
-  background-image: url(amirkabir1.jpg);
+  background-image: url(amirkabi1.jpg);
   transform: rotateY(200deg) translateZ(430px);
 }
 
 .images:nth-child(7){
-  background-image: url(amirkabir2.jpg);
+  background-image: url(amirkabi2.jpg);
   transform: rotateY(2400deg) translateZ(430px);
 }
 
 .images:nth-child(8){
-  background-image: url(amirkabir3.jpg);
+  background-image: url(amirkabi3.jpg);
   transform: rotateY(280deg) translateZ(430px);
 }
 
 .images:nth-child(9){
-  background-image: url(amirkabir4.jpg);
+  background-image: url(amirkabi4.jpg);
   transform: rotateY(320deg) translateZ(430px);
 }
 
@@ -396,37 +455,37 @@ a {
 }
 
 .imagesm1{
-  background-image: url(amirkabir1.jpg);
+  background-image: url(amirkabi1.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm2{
-  background-image: url(amirkabir2.jpg);
+  background-image: url(amirkabi2.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm3{
-  background-image: url(amirkabir3.jpg);
+  background-image: url(amirkabi3.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm4{
-  background-image: url(amirkabir4.jpg);
+  background-image: url(amirkabi4.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm5{
-  background-image: url(amirkabir5.jpg);
+  background-image: url(amirkabi5.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm6{
-  background-image: url(amirkabir1.jpg);
+  background-image: url(amirkabi1.jpg);
   background-position: center center;
   background-size: cover;
 }
@@ -568,6 +627,10 @@ a:hover {
 
 
  @media screen and (max-width: 900px) {
+  .language-selector{
+    margin-top: 60px;
+  }
+
   .navDiv {
     display: none;
   }
@@ -758,6 +821,11 @@ a:hover {
 }
 
 @media screen and (max-width:413px) {
+  .language-selector{
+    margin-top: 55px;
+    margin-right: 15px;
+  }
+
   .containerm{
     height: 1700px;
   }

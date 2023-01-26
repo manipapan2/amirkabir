@@ -11,6 +11,84 @@ var nam4 = document.getElementById("nam4")
 var nam5 = document.getElementById("nam5")
 var nam6 = document.getElementById("nam6")
 var nav = document.getElementById("nav")
+var farsi = document.getElementById("farsi")
+var english = document.getElementById("english")
+var rang = document.getElementById("rang")
+const divs = document.querySelectorAll(".a");
+farsi.addEventListener("click",()=>{
+  farsi.style.transition="0.5s"
+  farsi.style.color = "black"
+  rang.style.transition="0.5s"
+  rang.style.margin="0px"
+  english.style.transition="0.5s"
+  english.style.color="white"
+  //==========nav============
+  document.querySelector("#nav p").innerHTML="...بزودی"
+  document.querySelector("#cms2").innerHTML="...بزودی"
+  document.querySelector("#photos").innerHTML="عکس ها"
+  document.querySelector("#home").innerHTML="خانه"
+  document.querySelector("#cms3").innerHTML="بزودی..."
+  document.querySelector("#cms4").innerHTML="بزودی..."
+  document.querySelector("#photos2").innerHTML="عکس ها"
+  document.querySelector("#home2").innerHTML="خانه"
+  //==========paragraph======
+  if(window.innerWidth > 900){
+    document.querySelector(".htc p").innerHTML="موس را بر روی کارت ها ببرید"
+    document.querySelector(".htc2 p").innerHTML="موس را بر روی کارت ها ببرید"
+  }
+
+  if(window.innerWidth < 900){
+    document.querySelector(".htc p").innerHTML="بر روی کارت ها کلیک کنید"
+    document.querySelector(".htc2 p").innerHTML="بر روی کارت ها کلیک کنید"
+  }
+  //=========cards===========
+  divs.forEach(div => div.innerText = "دانلود")
+  //=========footer=========
+  document.querySelector("footer li:nth-child(1)").innerHTML="سورس کد"
+  document.querySelector("footer li:nth-child(2)").innerHTML="سورس کد وب سایت امیر کبیر"
+  document.querySelector("footer a:nth-child(1)").innerHTML="سورس کد وب سایت امیر کبیر"
+  document.querySelector("#s1").innerHTML="سورس کد"
+  document.querySelector("#d1").innerHTML="سازنده"
+  document.querySelector(".copyright").innerHTML="© manipapan2 کپی رایت توسط"
+
+
+})
+
+english.addEventListener("click",()=>{
+  farsi.style.color = "white"
+  rang.style.marginRight="50%"
+  english.style.color="black"
+  //==========nav============
+  document.querySelector("#nav p").innerHTML="Coming Soon..."
+  document.querySelector("#cms2").innerHTML="Coming Soon..."
+  document.querySelector("#photos").innerHTML="Photos"
+  document.querySelector("#home").innerHTML="Home"
+  document.querySelector("#cms3").innerHTML="...Coming Soon"
+  document.querySelector("#cms4").innerHTML="...Coming Soon"
+  document.querySelector("#photos2").innerHTML="Photos"
+  document.querySelector("#home2").innerHTML="Home"
+  //==========paragraph======
+  if(window.innerWidth > 900){
+    document.querySelector(".htc p").innerHTML="Hover The Cards"
+    document.querySelector(".htc2 p").innerHTML="Hover The Cards"
+  }
+  if(window.innerWidth < 900){
+    document.querySelector(".htc p").innerHTML="Click The Cards"
+    document.querySelector(".htc2 p").innerHTML="Click The Cards"
+  }
+  //=========cards===========
+  divs.forEach(div => div.innerText = "Click to Download")
+
+  //=========footer=========
+  document.querySelector("footer li:nth-child(1)").innerHTML="Source Code"
+  document.querySelector("footer li:nth-child(2)").innerHTML="Amir Kabir's Source Code"
+  document.querySelector("footer a:nth-child(1)").innerHTML="Amir Kabir's Source Code"
+  document.querySelector("#s1").innerHTML="Source Code"
+  document.querySelector("#d1").innerHTML="Developer"
+  document.querySelector(".copyright").innerHTML="© Copyrigt By manipapan2"
+  
+})
+
 document.getElementById("youtube").addEventListener("click",alerting)
 document.getElementById("instagram").addEventListener("click",alerting)
 document.getElementById("twitter").addEventListener("click",alerting)
@@ -20,7 +98,7 @@ window.addEventListener("load", (event) => {
   }, "1");
   nav.style.transform = "translateY(0px)";
 
-  if(window.screen.width > 900){
+  if(window.innerWidth > 900){
     if(window.scrollY > 20){
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
@@ -34,14 +112,14 @@ window.addEventListener("load", (event) => {
     }
   }
 
-  if(window.screen.width < 900){
+  if(window.innerWidth < 900){
     nav.style.borderTopRightRadius="0px"
     nav.style.borderBottomLeftRadius="0px"
     nav.style.borderBottomRightRadius="0px"
   }
 
   window.onscroll = function (e) {
-    if(window.screen.width > 900){
+    if(window.innerWidth > 900){
       if(window.scrollY > 20){
         nav.style.borderTopRightRadius="25px"
         nav.style.borderBottomRightRadius="25px"
@@ -55,7 +133,7 @@ window.addEventListener("load", (event) => {
       }
     }
   
-    if(window.screen.width < 900){
+    if(window.innerWidth < 900){
       nav.style.borderTopRightRadius="0px"
       nav.style.borderBottomLeftRadius="0px"
       nav.style.borderBottomRightRadius="0px"
@@ -65,7 +143,7 @@ window.addEventListener("load", (event) => {
 
 
 window.addEventListener("resize",()=>{
-  if(window.screen.width > 900){
+  if(window.innerWidth > 900){
     if(window.scrollY > 20){
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
@@ -81,11 +159,31 @@ window.addEventListener("resize",()=>{
     }
   }
 
-  if(window.screen.width < 900){
+  if(window.innerWidth < 900){
     nav.style.borderTopRightRadius="0px"
     nav.style.borderBottomLeftRadius="0px"
     nav.style.borderBottomRightRadius="0px"
     console.log("sevomi")
+  }
+
+  if(window.innerWidth > 900 && english.style.color=="black"){
+    document.querySelector(".htc p").innerHTML = "Hover The Cards"
+    document.querySelector(".htc2 p").innerHTML = "Hover The Cards"
+  }
+
+  if(window.innerWidth > 900 && english.style.color=="white"){
+    document.querySelector(".htc p").innerHTML = "موس را بر روی کارت ها ببرید"
+    document.querySelector(".htc2 p").innerHTML = "موس را بر روی کارت ها ببرید"
+  }
+
+  if(window.innerWidth < 900 && english.style.color=="white"){
+    document.querySelector(".htc p").innerHTML = "بر روی کارت ها کلیک کنید"
+    document.querySelector(".htc2 p").innerHTML = "بر روی کارت ها کلیک کنید"
+  }
+
+  if(window.innerWidth < 900 && english.style.color == "black" ){
+    document.querySelector(".htc p").innerHTML = "Click The Cards"
+    document.querySelector(".htc2 p").innerHTML = "Click The Cards"
   }
 
 
