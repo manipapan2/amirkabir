@@ -244,7 +244,7 @@ nav {
   width: 46px;
   height: 46px;
   margin: 0 0 0 20px;
-  background-image: url(/!images/amir.png);
+  background-image: url(amir.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -297,7 +297,7 @@ a {
   top: 20px;
   left: 10px;
   right: 10px;
-  background-image: url(/!images/bazar.jpg);
+  background-image: url(bazar.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -311,42 +311,42 @@ a {
 }
 
 .images:nth-child(2){
-  background-image: url(amirkabi2.jpg);
+  background-image: url(amirkabir2.jpg);
   transform: rotateY(40deg) translateZ(430px);
 }
 
 .images:nth-child(3){
-  background-image: url(amirkabi3.jpg);
+  background-image: url(amirkabir3.jpg);
   transform: rotateY(80deg) translateZ(430px);
 }
 
 .images:nth-child(4){
-  background-image: url(amirkabi4.jpg);
+  background-image: url(amirkabir4.jpg);
   transform: rotateY(120deg) translateZ(430px);
 }
 
 .images:nth-child(5){
-  background-image: url(amirkabi5.jpg);
+  background-image: url(amirkabir5.jpg);
   transform: rotateY(160deg) translateZ(430px);
 }
 
 .images:nth-child(6){
-  background-image: url(amirkabi1.jpg);
+  background-image: url(amirkabir1.jpg);
   transform: rotateY(200deg) translateZ(430px);
 }
 
 .images:nth-child(7){
-  background-image: url(amirkabi2.jpg);
+  background-image: url(amirkabir2.jpg);
   transform: rotateY(2400deg) translateZ(430px);
 }
 
 .images:nth-child(8){
-  background-image: url(amirkabi3.jpg);
+  background-image: url(amirkabir3.jpg);
   transform: rotateY(280deg) translateZ(430px);
 }
 
 .images:nth-child(9){
-  background-image: url(amirkabi4.jpg);
+  background-image: url(amirkabir4.jpg);
   transform: rotateY(320deg) translateZ(430px);
 }
 
@@ -461,25 +461,25 @@ a {
 }
 
 .imagesm2{
-  background-image: url(amirkabi2.jpg);
+  background-image: url(amirkabir2.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm3{
-  background-image: url(amirkabi3.jpg);
+  background-image: url(amirkabir3.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm4{
-  background-image: url(amirkabi4.jpg);
+  background-image: url(amirkabir4.jpg);
   background-position: center center;
   background-size: cover;
 }
 
 .imagesm5{
-  background-image: url(amirkabi5.jpg);
+  background-image: url(amirkabir5.jpg);
   background-position: center center;
   background-size: cover;
 }
