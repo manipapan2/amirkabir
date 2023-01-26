@@ -14,6 +14,91 @@ var text =
   "میرزا محمد تقی‌خان فراهانی (۱۲۲۲-۱۲۶۸ق) (۱۱۸۵-۱۲۳۰ش) مشهور به امیرکبیر، صدراعظم‌ ایران در دوره ناصرالدین شاه قاجار. وی در دوره صدارت سه سال و سه ماه (۳۹ ماهه) خود، اصلاحاتی را در زمینه‌های آموزشی، اجتماعی و سیاسی ایران آغاز کرد. امیرکبیر دارُالفُنون را بنیان نهاد، مسجد و مدرسه دینی ساخت، بست‌نشینی در بیوت علما و تعزیه‌خوانی را محدود و شورش بابی‌ها را سرکوب کرد. او با دسیسه اطرافیان شاه از مقام خود برکنار و به کاشان تبعید شد و به دستور شاه به قتل رسید. قبر وی در حرم امام حسین(ع) قرار دارد.";
 var prasl = text.split("");
 var cheshmak = document.getElementById("cheshmak");
+var farsi = document.getElementById("farsi")
+var english = document.getElementById("english")
+var rang = document.getElementById("rang")
+farsi.addEventListener("click",()=>{
+  farsi.style.transition="0.5s"
+  farsi.style.color = "black"
+  rang.style.transition="0.5s"
+  rang.style.margin="0px"
+  english.style.transition="0.5s"
+  english.style.color="white"
+  //==========nav============
+  document.querySelector("#nav p").innerHTML="بزودی..."
+  document.querySelector("#cms2").innerHTML="بزودی..."
+  document.querySelector("#photos").innerHTML="عکس ها"
+  document.querySelector("#home").innerHTML="خانه"
+  document.querySelector("#cms3").innerHTML="بزودی..."
+  document.querySelector("#cms4").innerHTML="بزودی..."
+  document.querySelector("#photos2").innerHTML="عکس ها"
+  document.querySelector("#home2").innerHTML="خانه"
+  //==========paragraph======
+  if(window.innerWidth > 900){
+    document.querySelector(".hoverme p").innerHTML="موس را بر روی کارت ها ببرید"
+  }
+
+  if(window.innerWidth < 900){
+    document.querySelector(".hoverme p").innerHTML="بر روی کارت ها کلیک کنید"
+  }
+  //=========cards===========
+  dokme.innerHTML="نمایش بیشتر"
+  dokme2.innerHTML="نمایش بیشتر"
+  dokme3.innerHTML="نمایش بیشتر"
+  dokme4.innerHTML="نمایش بیشتر"
+  dokmekam.innerHTML="برگشت"
+  dokmekam2.innerHTML="برگشت"
+  dokmekam3.innerHTML="برگشت"
+  dokmekam4.innerHTML="برگشت"
+  //=========footer=========
+  document.querySelector("footer li:nth-child(1)").innerHTML="سورس کد"
+  document.querySelector("footer li:nth-child(2)").innerHTML="سورس کد وب سایت امیر کبیر"
+  document.querySelector("footer a:nth-child(1)").innerHTML="سورس کد وب سایت امیر کبیر"
+  document.querySelector("#s1").innerHTML="سورس کد"
+  document.querySelector("#d1").innerHTML="سازنده"
+  document.querySelector(".copyright").innerHTML="کپی رایت توسط manipapan2 ©"
+
+
+})
+
+english.addEventListener("click",()=>{
+  farsi.style.color = "white"
+  rang.style.marginRight="50%"
+  english.style.color="black"
+  //==========nav============
+  document.querySelector("#nav p").innerHTML="...Coming Soon"
+  document.querySelector("#cms2").innerHTML="...Coming Soon"
+  document.querySelector("#photos").innerHTML="Photos"
+  document.querySelector("#home").innerHTML="Home"
+  document.querySelector("#cms3").innerHTML="...Coming Soon"
+  document.querySelector("#cms4").innerHTML="...Coming Soon"
+  document.querySelector("#photos2").innerHTML="Photos"
+  document.querySelector("#home2").innerHTML="Home"
+  //==========paragraph======
+  if(window.innerWidth > 900){
+    document.querySelector(".hoverme p").innerHTML="Hover The Cards"
+  }
+  if(window.innerWidth < 900){
+    document.querySelector(".hoverme p").innerHTML="Click The Cards"
+  }
+  //=========cards===========
+  dokme.innerHTML="Show More"
+  dokme2.innerHTML="Show More"
+  dokme3.innerHTML="Show More"
+  dokme4.innerHTML="Show More"
+  dokmekam.innerHTML="Back"
+  dokmekam2.innerHTML="Back"
+  dokmekam3.innerHTML="Back"
+  dokmekam4.innerHTML="Back"
+  //=========footer=========
+  document.querySelector("footer li:nth-child(1)").innerHTML="Source Code"
+  document.querySelector("footer li:nth-child(2)").innerHTML="Amir Kabir's Source Code"
+  document.querySelector("footer a:nth-child(1)").innerHTML="Amir Kabir's Source Code"
+  document.querySelector("#s1").innerHTML="Source Code"
+  document.querySelector("#d1").innerHTML="Developer"
+  document.querySelector(".copyright").innerHTML="© Copyrigt By manipapan2"
+  
+})
 
 document.getElementById("youtube").addEventListener("click", alerting);
 document.getElementById("instagram").addEventListener("click", alerting);
@@ -39,12 +124,12 @@ setTimeout(() => {
 
 setTimeout(() => {
   document.querySelector("body").style.position = "absolute";
-  if (window.screen.width > 900) {
-    aboutme.style.transform = "translateX(" + window.screen.width + "px)";
-    gradientan.style.transform = "translateX(" + window.screen.width + "px)";
+  if (window.innerWidth > 900) {
+    aboutme.style.transform = "translateX(" + window.innerWidth + "px)";
+    gradientan.style.transform = "translateX(" + window.innerWidth + "px)";
   } else {
-    aboutme.style.transform = "translateX(" + window.screen.width + "px)";
-    gradientan.style.transform = "translateX(" + window.screen.width + "px)";
+    aboutme.style.transform = "translateX(" + window.innerWidth + "px)";
+    gradientan.style.transform = "translateX(" + window.innerWidth + "px)";
   }
 
   setTimeout(() => {
@@ -120,7 +205,7 @@ setTimeout(() => {
     photoabout.style.outlineOffset = "5px";
   }, "2000");
 
-  if(window.screen.width > 900){
+  if(window.innerWidth > 900){
     if(window.scrollY > 20){
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
@@ -135,7 +220,7 @@ setTimeout(() => {
     document.querySelector(".hoverme p").innerHTML = "Hover The Cards"
   }
 
-  if(window.screen.width < 900){
+  if(window.innerWidth < 900){
     nav.style.borderTopRightRadius="0px"
     nav.style.borderBottomLeftRadius="0px"
     nav.style.borderBottomRightRadius="0px"
@@ -143,7 +228,7 @@ setTimeout(() => {
   }
 
   window.onscroll = function (e) {
-    if(window.screen.width > 900){
+    if(window.innerWidth > 900){
       if(window.scrollY > 20){
         nav.style.borderTopRightRadius="25px"
         nav.style.borderBottomRightRadius="25px"
@@ -157,7 +242,7 @@ setTimeout(() => {
       }
     }
   
-    if(window.screen.width < 900){
+    if(window.innerWidth < 900){
       nav.style.borderTopRightRadius="0px"
       nav.style.borderBottomLeftRadius="0px"
       nav.style.borderBottomRightRadius="0px"
@@ -170,7 +255,7 @@ setTimeout(() => {
 }, 3000);
 
 window.addEventListener("resize",()=>{
-  if(window.screen.width > 900){
+  if(window.innerWidth > 900){
     if(window.scrollY > 20){
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
@@ -182,14 +267,30 @@ window.addEventListener("resize",()=>{
       nav.style.borderBottomLeftRadius="25px"
       nav.style.borderBottomRightRadius="0"
     }
+  }
+
+  if(window.innerWidth > 900 && english.style.color=="black"){
     document.querySelector(".hoverme p").innerHTML = "Hover The Cards"
   }
 
-  if(window.screen.width < 900){
+  if(window.innerWidth > 900 && english.style.color=="white"){
+    document.querySelector(".hoverme p").innerHTML = "موس را بر روی کارت ها ببرید"
+  }
+
+  if(window.innerWidth < 900 && english.style.color=="white"){
+    document.querySelector(".hoverme p").innerHTML = "بر روی کارت ها کلیک کنید"
+  }
+
+  if(window.innerWidth < 900 && english.style.color == "black" ){
+    document.querySelector(".hoverme p").innerHTML = "Click The Cards"
+  }
+
+  
+
+  if(window.innerWidth < 900){
     nav.style.borderTopRightRadius="0px"
     nav.style.borderBottomLeftRadius="0px"
     nav.style.borderBottomRightRadius="0px"
-    document.querySelector(".hoverme p").innerHTML = "Click The Cards"
   }
 
 })

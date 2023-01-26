@@ -53,6 +53,63 @@ html {
   height: 100vh;
 }
 
+.language-selector{
+  position: absolute;
+  display: flex;
+  width: 120px;
+  height: 30px;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.farsi{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 2px white solid;
+  border-left: 0px;
+  border-radius: 0 3px 3px 0;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.english{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 2px white solid;
+  border-right: 0px;
+  border-radius: 3px 0 0 3px;
+  font-size: 12px;
+  text-align: center;
+  /* background-color: white; */
+  color: black;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+}
+
+
+.english p,.farsi p{
+  display: flex;
+  margin: auto;
+}
+
+.rang{
+  position: absolute;
+  display: flex;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  margin-right: 50%;
+  transition: 1s;
+}
+
 nav {
   position: sticky;
   display: flex;
@@ -275,6 +332,7 @@ nav {
   font-size: 50px;
   direction: ltr;
   color: white;
+  text-align: center;
 }
 
 .cartdiv {
@@ -722,6 +780,7 @@ a:hover {
   direction: ltr;
 }
 
+
 #github,#youtube,#twitter,#instagram{
   font-size: 30px;
   margin: 0 10px 0 10px;
@@ -734,6 +793,10 @@ a:hover {
 
 
 @media screen and (max-width: 900px) {
+  .language-selector{
+    margin-top: 70px;
+  }
+
   .navDiv {
     display: none;
   }
