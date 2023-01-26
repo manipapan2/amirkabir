@@ -25,8 +25,8 @@ farsi.addEventListener("click",()=>{
   english.style.transition="0.5s"
   english.style.color="white"
   //==========nav============
-  document.querySelector("#nav p").innerHTML="بزودی..."
-  document.querySelector("#cms2").innerHTML="بزودی..."
+  document.querySelector("#nav p").innerHTML="...بزودی"
+  document.querySelector("#cms2").innerHTML="...بزودی"
   document.querySelector("#photos").innerHTML="عکس ها"
   document.querySelector("#home").innerHTML="خانه"
   document.querySelector("#cms3").innerHTML="بزودی..."
@@ -66,8 +66,8 @@ english.addEventListener("click",()=>{
   rang.style.marginRight="50%"
   english.style.color="black"
   //==========nav============
-  document.querySelector("#nav p").innerHTML="...Coming Soon"
-  document.querySelector("#cms2").innerHTML="...Coming Soon"
+  document.querySelector("#nav p").innerHTML="Coming Soon..."
+  document.querySelector("#cms2").innerHTML="Coming Soon..."
   document.querySelector("#photos").innerHTML="Photos"
   document.querySelector("#home").innerHTML="Home"
   document.querySelector("#cms3").innerHTML="...Coming Soon"
