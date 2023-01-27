@@ -306,7 +306,7 @@ a {
 }
 
 .images:nth-child(1){
-  background-image: url(amirkabi1.jpg);
+  background-image: url(amirkabir1.jpg);
   transform: rotateY(0deg) translateZ(430px);
 }
 
@@ -455,7 +455,7 @@ a {
 }
 
 .imagesm1{
-  background-image: url(amirkabi1.jpg);
+  background-image: url(amirkabir1.jpg);
   background-position: center center;
   background-size: cover;
 }
