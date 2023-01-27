@@ -15,6 +15,7 @@ var farsi = document.getElementById("farsi")
 var english = document.getElementById("english")
 var rang = document.getElementById("rang")
 const divs = document.querySelectorAll(".a");
+var marginezafe = document.getElementById("marginezafe")
 farsi.addEventListener("click",()=>{
   farsi.style.transition="0.5s"
   farsi.style.color = "black"
@@ -24,6 +25,51 @@ farsi.addEventListener("click",()=>{
   english.style.color="white"
   //==========nav============
   document.querySelector("#nav p").innerHTML="...بزودی"
+  if(window.innerWidth >= 1210){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 1210){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 1185){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 1168){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 1115){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 1114){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 1081){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 999){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 931){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 918){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 915){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 914){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 912){
+    marginezafe.style.marginLeft="6px"
+  }
+  if(window.innerWidth < 903){
+    marginezafe.style.marginLeft="5px"
+  }
+  if(window.innerWidth < 900){
+    marginezafe.style.marginLeft="20px"
+  }
   document.querySelector("#cms2").innerHTML="...بزودی"
   document.querySelector("#photos").innerHTML="عکس ها"
   document.querySelector("#home").innerHTML="خانه"
@@ -44,9 +90,10 @@ farsi.addEventListener("click",()=>{
   //=========cards===========
   divs.forEach(div => div.innerText = "دانلود")
   //=========footer=========
-  document.querySelector("footer li:nth-child(1)").innerHTML="سورس کد"
-  document.querySelector("footer li:nth-child(2)").innerHTML="سورس کد وب سایت امیر کبیر"
-  document.querySelector("footer a:nth-child(1)").innerHTML="سورس کد وب سایت امیر کبیر"
+  document.querySelector("footer li:nth-child(1)").innerHTML="سورس ها"
+  document.getElementById("a1").innerHTML="ویکی پدیا"
+  document.getElementById("a2").innerHTML="ویکی شیعه"
+  document.getElementById("a3").innerHTML="سورس کد وب سایت امیر کبیر"
   document.querySelector("#s1").innerHTML="سورس کد"
   document.querySelector("#d1").innerHTML="سازنده"
   document.querySelector(".copyright").innerHTML="© manipapan2 کپی رایت توسط"
@@ -60,6 +107,7 @@ english.addEventListener("click",()=>{
   english.style.color="black"
   //==========nav============
   document.querySelector("#nav p").innerHTML="Coming Soon..."
+  marginezafe.style.marginLeft="20px"
   document.querySelector("#cms2").innerHTML="Coming Soon..."
   document.querySelector("#photos").innerHTML="Photos"
   document.querySelector("#home").innerHTML="Home"
@@ -80,9 +128,10 @@ english.addEventListener("click",()=>{
   divs.forEach(div => div.innerText = "Click to Download")
 
   //=========footer=========
-  document.querySelector("footer li:nth-child(1)").innerHTML="Source Code"
-  document.querySelector("footer li:nth-child(2)").innerHTML="Amir Kabir's Source Code"
-  document.querySelector("footer a:nth-child(1)").innerHTML="Amir Kabir's Source Code"
+  document.querySelector("footer li:nth-child(1)").innerHTML="Sources"
+  document.getElementById("a1").innerHTML="wikipedia"
+  document.getElementById("a2").innerHTML="wikishia"
+  document.getElementById("a3").innerHTML="Amir Kabir's Source Code"
   document.querySelector("#s1").innerHTML="Source Code"
   document.querySelector("#d1").innerHTML="Developer"
   document.querySelector(".copyright").innerHTML="© Copyrigt By manipapan2"
@@ -139,6 +188,34 @@ window.addEventListener("load", (event) => {
       nav.style.borderBottomRightRadius="0px"
     }
   }
+
+  document.querySelector(".language-selector").classList.add("show")
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entries)=>{
+      if(entries.isIntersecting){
+        // entries.target.classList.add("show")
+        anielement.classList.add("show")
+      }
+    })
+  })
+  
+  const observerr = new IntersectionObserver((entries)=>{
+    entries.forEach((entries)=>{
+      if(entries.isIntersecting){
+        entries.target.classList.add("show")
+      }
+    })
+  })
+  
+  const anielement = document.querySelector(".htc2")
+  observer.observe(anielement)
+  
+  const anielements = document.querySelectorAll(".imagesm")
+  anielements.forEach((el) => {
+    observerr.observe(el)
+  });
+
 });
 
 
@@ -258,6 +335,9 @@ imagesm6.addEventListener("mouseenter",()=>{
 imagesm6.addEventListener("mouseleave",()=>{
   nam6.style.display="flex"
 })
+
+
+
 
 
 function alerting(){
