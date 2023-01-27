@@ -152,6 +152,7 @@ window.addEventListener("load", (event) => {
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
       nav.style.borderTopRightRadius="0px"
+      nav.style.borderBottomLeftRadius="25px"
     }
 
     if(window.scrollY < 20){
