@@ -802,8 +802,13 @@ a:hover {
   margin: 0 10px 0 10px;
   cursor: pointer;
   color: white;
+  transition: 500ms;
 }
 
+
+#github:hover,#youtube:hover,#twitter:hover,#instagram:hover{
+  transform: translateY(-5px);
+}
 
 
 
@@ -811,6 +816,7 @@ a:hover {
 @media screen and (max-width: 900px) {
   .language-selector{
     margin-top: 70px;
+    z-index: -1;
   }
 
   .navDiv {
@@ -820,36 +826,70 @@ a:hover {
   nav {
     position: static;
     justify-content: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
     border-radius: 0;
     margin: 0;
   }
 
-  .khat3 {
+  .khatd{
     position: relative;
     display: block;
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    transform: translateY(-10px);
+    width: 50px;
+    height: 100%;
+    /* background-color: black; */
+    justify-content: center;
+    align-items: center;
   }
 
-  .khat3::after {
-    content: "";
+  .khat3 {
+    margin: 0  10px 0 10px;
     position: absolute;
-    width: 100%;
+    display: block;
+    width: 30px;
     height: 2px;
     background-color: black;
     transform: translateY(10px);
   }
 
-  .khat3::before {
-    content: "";
+  .khata {
+    margin: 0  10px 0 10px;
     position: absolute;
-    width: 100%;
+    width: 30px;
     height: 2px;
     background-color: black;
     transform: translateY(20px);
+    transition: 0.2s;
+
+  }
+
+  .khatb {
+    margin: 0  10px 0 10px;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transform: translateY(30px) ;
+    transition: 0.2s;
+  }
+
+  .rotate{
+    animation: 0.2s ease-in rotate;
+  }
+
+  @keyframes rotate {
+    to{transform: rotate(-360deg);}
+  }
+
+  .fadeoutkhat{
+    animation: fadeout 400ms;
+  }
+
+  .fadeinkhat{
+    animation: fadein 400ms;
+  }
+
+  @keyframes fadein {
+    to{opacity: 1;}
   }
 
   .khatc {
@@ -861,22 +901,64 @@ a:hover {
     opacity: 0.2;
   }
 
+  /* .gradientan{
+    position: relative;
+    z-index: -2;
+  } */
+
   .navmobile {
-    position: fixed;
-    display: flex;
+    position: absolute;
     top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     width: 100%;
-    height: 100vh;
-    background-color: #8ec5fc;
-    background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 100%);
-    transform: translateX(101%);
-    transition: 1s;
-    z-index: 100;
+    justify-content: flex-start;
+    height: 0;
+    background-color: #0093e9;
+    background-image: linear-gradient(90deg, #0093e9 0%, #80d0c7 100%);
+    transform: translateY(50px);
+    transition: 0.5s;
+    z-index: 1000;
+    /* overflow-y: auto; */
+  }
+
+  .navmDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: 500ms;
+    opacity: 0;
+    transition: 400ms;
+  }
+
+  /* .nas{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .navmobile::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  .navmobile::-webkit-scrollbar-track {
+    background: #b1b8f2;
+  }
+  
+  .navmobile::-webkit-scrollbar-thumb {
+    background: #4161ac;
+  }
+  
+  .navmobile::-webkit-scrollbar-thumb:hover {
+    background: #2764ee;
+  }
+  
+  .navmobile::-webkit-scrollbar-thumb:active {
+    background: #004cff;
   }
 
   .divzabdar {
@@ -889,6 +971,7 @@ a:hover {
     right: 30;
     transform: rotate(45deg);
   }
+
 
   .zabdar {
     position: absolute;
@@ -922,6 +1005,7 @@ a:hover {
     right: 30;
   }
 
+
   .your-logo {
     position: absolute;
     width: 50px;
@@ -929,12 +1013,6 @@ a:hover {
     left: 50;
   }
 
-  .navmDiv {
-    width: 100%;
-    height: 15%;
-    display: flex;
-    transition: 500ms;
-  }
 
   .navmDiv p {
     margin: auto;
@@ -947,11 +1025,11 @@ a:hover {
   }
 
   .siahk {
-    background-color: #b59dd3;
+    /* background-color: #b59dd3; */
   }
 
   .sefidk {
-    background-color: #b3c4fc;
+    /* background-color: #b3c4fc; */
   }
 
   .photo-about {
@@ -1026,4 +1104,10 @@ a:hover {
     margin-top: 40px;
   }
 
+}
+
+@media screen and (max-height:364px) {
+  .navmDiv{
+    font-size: 13px;
+  }
 }

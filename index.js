@@ -1,6 +1,7 @@
 var nav = document.getElementById("nav");
 var khatclick = document.getElementById("khatclick");
 var navmobile = document.getElementById("navmobile");
+var navmDiv = document.getElementsByClassName("navmDiv")
 var zabdarclick = document.getElementById("zabdarclick");
 var aboutme = document.querySelector("#aboutme");
 var gradientan = document.getElementById("gradientan");
@@ -10,6 +11,11 @@ var dayereanim1 = document.getElementById("dayereanim1");
 var dayereanim2 = document.getElementById("dayereanim2");
 var moratab1 = document.getElementById("moratab1");
 var moratab2 = document.getElementById("moratab2");
+var win = window.innerHeight
+var khat3 = document.getElementById("khat3");
+var khata = document.getElementById("khata");
+var khatb = document.getElementById("khatb");
+var nas = document.getElementById("nas")
 var text =
   "میرزا محمد تقی‌خان فراهانی (۱۲۲۲-۱۲۶۸ق) (۱۱۸۵-۱۲۳۰ش) مشهور به امیرکبیر، صدراعظم‌ ایران در دوره ناصرالدین شاه قاجار. وی در دوره صدارت سه سال و سه ماه (۳۹ ماهه) خود، اصلاحاتی را در زمینه‌های آموزشی، اجتماعی و سیاسی ایران آغاز کرد. امیرکبیر دارُالفُنون را بنیان نهاد، مسجد و مدرسه دینی ساخت، بست‌نشینی در بیوت علما و تعزیه‌خوانی را محدود و شورش بابی‌ها را سرکوب کرد. او با دسیسه اطرافیان شاه از مقام خود برکنار و به کاشان تبعید شد و به دستور شاه به قتل رسید. قبر وی در حرم امام حسین(ع) قرار دارد.";
 var prasl = text.split("");
@@ -18,6 +24,21 @@ var farsi = document.getElementById("farsi")
 var english = document.getElementById("english")
 var rang = document.getElementById("rang")
 var marginezafe = document.getElementById("marginezafe")
+
+  setTimeout(dd, 1000);
+
+function dd() {
+  dayereanim1.classList.remove("dayereanim1");
+  dayereanim2.classList.add("dayereanim2");
+  setTimeout(ddd, 1000);
+}
+
+function ddd() {
+  dayereanim1.classList.add("dayereanim1");
+  dayereanim2.classList.remove("dayereanim2");
+  setTimeout(dd, 1000);
+}
+
 farsi.addEventListener("click",()=>{
   farsi.style.transition="0.5s"
   farsi.style.color = "black"
@@ -153,19 +174,6 @@ document.getElementById("youtube").addEventListener("click", alerting);
 document.getElementById("instagram").addEventListener("click", alerting);
 document.getElementById("twitter").addEventListener("click", alerting);
 
-setTimeout(dd, 1000);
-
-function dd() {
-  dayereanim1.classList.remove("dayereanim1");
-  dayereanim2.classList.add("dayereanim2");
-  setTimeout(ddd, 1000);
-}
-
-function ddd() {
-  dayereanim1.classList.add("dayereanim1");
-  dayereanim2.classList.remove("dayereanim2");
-  setTimeout(dd, 1000);
-}
 
 setTimeout(() => {
   loading.style.display = "none";
@@ -180,6 +188,8 @@ setTimeout(() => {
     aboutme.style.transform = "translateX(" + window.innerWidth + "px)";
     gradientan.style.transform = "translateX(" + window.innerWidth + "px)";
   }
+
+  // navmobile.style.height=(win - 50) + "px"
 
   setTimeout(() => {
     nav.style.transition = "0.3s";
@@ -361,7 +371,6 @@ window.addEventListener("resize",()=>{
     document.querySelector(".hoverme p").innerHTML = "Click The Cards"
   }
 
-  
 
   if(window.innerWidth < 900){
     nav.style.borderTopRightRadius="0px"
@@ -369,17 +378,50 @@ window.addEventListener("resize",()=>{
     nav.style.borderBottomRightRadius="0px"
   }
 
+  // if(khata.style.opacity=="1"){
+  //   navmobile.style.height=0 + "px"
+  // }
+  // if(khata.style.opacity=="0"){
+  //   navmobile.style.height=(window.innerHeight - 50) + "px"
+  // }
+
 })
 
+// var khatd = document.getElementById("khatd")
+
 khatclick.addEventListener("click", () => {
-  navmobile.style.transform = "translateX(0%)";
-  document.querySelector("body").style.position = "fixed";
+  // navmobile.style.height=(window.innerHeight - 50) + "px"
+  // document.querySelector("body").style.position = "fixed";
+  if(navmobile.style.height!="100vh"){
+    document.querySelector("body").style.overflowY="hidden"
+    navmobile.style.height="100vh"
+    navmobile.style.paddingBottom = "40px"
+    khat3.style.transform="translateY(20px) rotate(45deg)"
+    khata.style.opacity="0"
+    khatb.style.transform="translateY(20px) rotate(-45deg)"
+    // document.querySelector("body").style.position = "fixed";
+    // document.querySelector("html").style.overflow="hidden"
+    for (const element of navmDiv) {
+      element.style.opacity="1"
+    }
+  }
+  else{
+    document.querySelector("body").style.overflowY="auto"
+    navmobile.style.height="0px"
+    navmobile.style.padding="0px"
+    document.querySelector("body").style.position = "absolute";
+    khat3.style.transform="translateY(10px) rotate(0deg)"
+    khatb.style.transform="translateY(30px) rotate(0deg)"
+    khata.style.opacity="1"
+    for (const element of navmDiv) {
+      element.style.opacity="0"
+    }
+
+  }
+  
+
 });
 
-zabdarclick.addEventListener("click", () => {
-  navmobile.style.transform = "translateX(101%)";
-  document.querySelector("body").style.position = "relative";
-});
 
 // ===========================cart===========================
 // window.addEventListener('resize', maxheight);
