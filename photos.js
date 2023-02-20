@@ -10,6 +10,11 @@ var nam3 = document.getElementById("nam3")
 var nam4 = document.getElementById("nam4")
 var nam5 = document.getElementById("nam5")
 var nam6 = document.getElementById("nam6")
+var navmDiv = document.getElementsByClassName("navmDiv")
+var khatclick = document.getElementById("khatclick");
+var khat3 = document.getElementById("khat3");
+var khata = document.getElementById("khata");
+var khatb = document.getElementById("khatb");
 var nav = document.getElementById("nav")
 var farsi = document.getElementById("farsi")
 var english = document.getElementById("english")
@@ -152,7 +157,6 @@ window.addEventListener("load", (event) => {
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
       nav.style.borderTopRightRadius="0px"
-      nav.style.borderBottomLeftRadius="25px"
     }
 
     if(window.scrollY < 20){
@@ -220,12 +224,15 @@ window.addEventListener("load", (event) => {
 });
 
 
+
+
 window.addEventListener("resize",()=>{
   if(window.innerWidth > 900){
     if(window.scrollY > 20){
       nav.style.borderTopRightRadius="25px"
       nav.style.borderBottomRightRadius="25px"
       nav.style.borderTopRightRadius="0px"
+      nav.style.borderBottomLeftRadius="25px"
       console.log("avali")
     }
 
@@ -268,14 +275,40 @@ window.addEventListener("resize",()=>{
 })
 
 khatclick.addEventListener("click", () => {
-  navmobile.style.transform = "translateX(0%)";
-  document.querySelector("body").style.position = "fixed";
+  // navmobile.style.height=(window.innerHeight - 50) + "px"
+  // document.querySelector("body").style.position = "fixed";
+  if(navmobile.style.height!="100vh"){
+    document.querySelector("body").style.overflowY="hidden"
+    navmobile.style.height="100vh"
+    navmobile.style.paddingBottom = "60px"
+    khat3.style.transform="translateY(20px) rotate(45deg)"
+    khata.style.opacity="0"
+    khatb.style.transform="translateY(20px) rotate(-45deg)"
+    // document.querySelector("body").style.position = "fixed";
+    // document.querySelector("html").style.overflow="hidden"
+    for (const element of navmDiv) {
+      element.style.opacity="1"
+    }
+  }
+  else{
+    document.querySelector("body").style.overflowY="auto"
+    navmobile.style.height="0px"
+    navmobile.style.padding="0px"
+    document.querySelector("body").style.position = "absolute";
+    khat3.style.transform="translateY(10px) rotate(0deg)"
+    khatb.style.transform="translateY(30px) rotate(0deg)"
+    khata.style.opacity="1"
+    for (const element of navmDiv) {
+      element.style.opacity="0"
+    }
+
+  }
+  
+
 });
 
-zabdarclick.addEventListener("click", () => {
-  navmobile.style.transform = "translateX(101%)";
-  document.querySelector("body").style.position = "relative";
-});
+
+
 
 imagesm1.addEventListener("mouseenter",()=>{
   setTimeout(() => {
