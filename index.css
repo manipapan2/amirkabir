@@ -193,7 +193,7 @@ nav {
   width: 46px;
   height: 46px;
   margin: 0 0 0 20px;
-  background-image: url(/amir.png);
+  background-image: url(amir.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -267,7 +267,7 @@ nav {
   width: 150px;
   height: 150px;
   margin: 20px auto 0 auto;
-  background-image: url(/amirkabir1.jpg);
+  background-image: url(amirkabir1.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -425,7 +425,7 @@ nav {
   display: flex;
   width: 270px;
   height: 100%;
-  background-image: url(/amirkabir2.jpg);
+  background-image: url(amirkabir2.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -438,21 +438,21 @@ nav {
 }
 
 .pi2{
-  background-image: url(/amirkabir3.jpg);
+  background-image: url(amirkabir3.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pi3{
-  background-image: url(/amirkabir5.jpg);
+  background-image: url(amirkabir5.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .pi4{
-  background-image: url(/amirkabir4.jpg);
+  background-image: url(amirkabir4.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
