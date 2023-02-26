@@ -78,8 +78,8 @@ farsi.addEventListener("click",()=>{
   document.querySelector("#cms2").innerHTML="...بزودی"
   document.querySelector("#photos").innerHTML="عکس ها"
   document.querySelector("#home").innerHTML="خانه"
-  document.querySelector("#cms3").innerHTML="بزودی..."
-  document.querySelector("#cms4").innerHTML="بزودی..."
+  document.querySelector("#cms3").innerHTML="...بزودی"
+  document.querySelector("#cms4").innerHTML="...بزودی"
   document.querySelector("#photos2").innerHTML="عکس ها"
   document.querySelector("#home2").innerHTML="خانه"
   //==========paragraph======
@@ -116,8 +116,8 @@ english.addEventListener("click",()=>{
   document.querySelector("#cms2").innerHTML="Coming Soon..."
   document.querySelector("#photos").innerHTML="Photos"
   document.querySelector("#home").innerHTML="Home"
-  document.querySelector("#cms3").innerHTML="...Coming Soon"
-  document.querySelector("#cms4").innerHTML="...Coming Soon"
+  document.querySelector("#cms3").innerHTML="Coming Soon..."
+  document.querySelector("#cms4").innerHTML="Coming Soon..."
   document.querySelector("#photos2").innerHTML="Photos"
   document.querySelector("#home2").innerHTML="Home"
   //==========paragraph======
