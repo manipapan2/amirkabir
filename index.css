@@ -816,7 +816,6 @@ a:hover {
 @media screen and (max-width: 900px) {
   .language-selector{
     margin-top: 70px;
-    z-index: -1;
   }
 
   .navDiv {
